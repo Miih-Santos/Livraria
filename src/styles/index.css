@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+/*fonte importada*/
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
+
+@import url(reset.css);
+
+body {
+    background-color: #F5EFEB;
+    text-transform: capitalize; 
+}
+
+a {
+    color: #000;
+}
+
+header#nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    gap: 10px;
+}
+
+#nav-bar-search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #2F4156;
+    height: 40px;
+    gap: 10px;
+    border-radius: 40px;
+}
+
+.search {
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 16px;
+    line-height: 40px;
+    width: 400px;
+    background: none;
+}
+
+#nav-bar-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 15pt;
+    padding: 10px;
+    gap: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    display: block;
+    top: 12px;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: .2s;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*hierarquia de títulos*/
+
+h2 {
+    font-family: 'IM Fell DW Pica SC';
+    font-size: 30pt;
+}
+
+h3 {
+    font-family: 'IM Fell DW Pica SC';
+    font-size: 20pt;
+
+}
+
+/*formatação do tamanho das imagens*/
+
+img#livro {
+    height: 300px;
+    width: 190px;
+    padding: 50px;
+}
+
+/*formatação das estrelas de avaliação*/ 
+
+.avaliação {
+    position: relative;
+    width: 80px;
+}
+
+.avaliações img {
+    padding: 105px;
+    margin-top: -180px;
+}
+
+/*formatação do preço*/
+
+.preço-livro p.livro1 {
+    position: relative;
+    top: -150px;
+    left: 65px;
+}
+
+.preço-livro p.livro2 {
+    position: relative;
+    top: -185px;
+    left: 355px;
+}
+
+.preço-livro p.livro3 {
+    position: relative;
+    top: -220px;
+    left: 655px;
+}
+
+/*formatação do espaçamento de cada categoria*/
+
+.mais-vendidos {
+    margin-top: -150px;
+}
+
+.mangas {
+    margin-top: -150px;
+}
+
+/*página de catálogo*/
+
+/*formatação da tabela*/
+
+#produto {
+    width: 90px;
+    height: 120px;
+}
+
+td, th {
+    padding: 30px;
+    border: 1px dashed black;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: whitesmoke;
+}
+
+/*p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+/*Formatação da página 'Sobre nós'*/
+
+.sobrenos {
+    text-align: center;
+}
+
+.paragrafo-sobrenos {
+    width: 900px;
+}
+
+.paragrafo-sobrenos p {
+    left: 200px;
+    position: relative;
+    font-size: 15pt;
+}
+
+/*formatação do rodapé*/ 
+
+/* Estilos para a seção de livros */
+#books-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#books-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2F4156;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.book-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #2F4156;
+}
+
+.book-author {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.book-price {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.book-synopsis {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.add-to-cart-btn {
+    background-color: #2F4156;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #1e2a3a;
+}

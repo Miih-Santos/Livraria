@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles/index.css" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Livraria Lela Book's</title>
+  </head>
+
+  <body>
+    <header id="nav-bar">
+      <div class="nav-bar-logo">
+        <ion-icon name="book-outline" size="large"></ion-icon>
+        <p class="name-store">lela book's</p>
+      </div>
+      <div id="nav-bar-search-box">
+        <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+        <input
+          type="text"
+          class="search"
+          placeholder="What do you want to read?"
+        />
+      </div>
+      <nav id="nav-bar-menu">
+        <a href="index.html">home</a>
+        <a href="catalogo.html">shop</a>
+        <a href="sobrenos.html">blog</a>
+        <a href="faleconosco.html">about us</a>
+        <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+        <a href=""
+          ><ion-icon name="person-circle-outline" size="large"></ion-icon
+        ></a>
+      </nav>
+    </header>
+
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="src/assets/images/banners/banner1.png" alt="Banner 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="src/assets/images/banners/banner2.png" alt="Banner 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="src/assets/images/banners/banner3.png" alt="Banner 3" />
+        </div>
+      </div>
+      <button class="carousel-control prev" onclick="prevSlide()">
+        &#10094;
+      </button>
+      <button class="carousel-control next" onclick="nextSlide()">
+        &#10095;
+      </button>
+    </div>
+
+    <section id="books-section">
+      <h2>Livros em Destaque</h2>
+      <div id="books-container" class="books-grid">
+        <!-- Cards de livros serão inseridos aqui dinamicamente -->
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy Copyright 2024 | Lela Book's</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="src/utils/booksdb.js"></script>
+    <script src="src/components/card-book.js"></script>
+    <script src="src/components/carrossel.js"></script>
+  </body>
+</html>

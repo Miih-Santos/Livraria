@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/*ajuste da largura do conteúdo presente na tela*/
+
+#Interface {
+    width: 1325px;
+}
+
+/*formatação do rodapé do sobre nós*/
+
+.sobre-nos {
+    bottom: -300px;
+}
